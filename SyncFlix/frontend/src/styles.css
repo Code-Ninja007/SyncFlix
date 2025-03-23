@@ -1,0 +1,158 @@
+/* Custom styles beyond Tailwind */
+
+/* Video player custom styles */
+#videoPlayer {
+    background: #000;
+    width: 100%;
+    height: 100%;
+}
+
+/* Custom progress bar styling */
+#progressBar {
+    transition: height 0.2s ease;
+}
+
+#progressBar:hover {
+    height: 0.5rem;
+}
+
+/* Volume slider customization */
+#volumeSlider {
+    -webkit-appearance: none;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    height: 4px;
+    outline: none;
+}
+
+#volumeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    background: #ef4444;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#volumeSlider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+#volumeSlider::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background: #ef4444;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+#volumeSlider::-moz-range-thumb:hover {
+    transform: scale(1.2);
+}
+
+/* Control button hover animations */
+.video-control-btn {
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.video-control-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Quality menu dropdown (for future implementation) */
+.quality-menu {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    padding: 0.5rem;
+}
+
+.quality-menu-item {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.quality-menu-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Loading animation */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.loading {
+    animation: pulse 1.5s infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4b5563;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6b7280;
+}
+
+/* Focus styles for accessibility */
+:focus {
+    outline: 2px solid #ef4444;
+    outline-offset: 2px;
+}
+
+/* Error message styling */
+.error-message {
+    background: rgba(239, 68, 68, 0.1);
+    border-left: 4px solid #ef4444;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    #videoControls {
+        padding: 0.5rem;
+    }
+
+    #timeDisplay {
+        font-size: 0.75rem;
+    }
+
+    .control-button {
+        padding: 0.25rem;
+    }
+}
+
+/* Fade animations */
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transition: opacity 200ms ease-in;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit-active {
+    opacity: 0;
+    transition: opacity 200ms ease-out;
+}
